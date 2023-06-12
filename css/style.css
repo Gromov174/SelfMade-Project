@@ -1238,10 +1238,7 @@ a.contact__info-subtitle:hover {
 /* ====================ADAPTIVE-1000PX==================== */
 
 @media (max-width: 1000px) {
-  .elipse {
-    z-index: 2;
-  }
-
+  
   .types-services__row {
     display: flex;
   }
