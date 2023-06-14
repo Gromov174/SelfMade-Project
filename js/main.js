@@ -91,7 +91,7 @@ $(function () {
   
   /* ====================SMOTH-SCROLL==================== */
 
-  $(".header__main-logo, .header__nav, .footer__nav-list, .footer__description, .footer__scrollup-box").on("click", "a", function (e) {
+   $(".header__nav-list, .footer__nav-list, .footer__description, .footer__scrollup-box").on("click", "a", function (e) {
     e.preventDefault()
     $('.popup').removeClass('popup--active')
     $('.overlay').removeClass('overlay--active')
@@ -99,6 +99,13 @@ $(function () {
     $('.header__top').removeClass('header__top--off')
     $('.burger').toggleClass('burger--close')
     $('.header__top-inner').toggleClass('header__top-inner--open')
+    var id = $(this).attr('href'),
+      top = $(id).offset().top
+    $('body,html').animate({ scrollTop: top }, 1500)
+  })
+
+  $(".header__main-logo").on("click", "a", function (e) {
+    e.preventDefault()
     var id = $(this).attr('href'),
       top = $(id).offset().top
     $('body,html').animate({ scrollTop: top }, 1500)
