@@ -43,12 +43,13 @@ $(function () {
 
   $('.portfolio__slider').slick({
     arrows: false,
-    dots: false,
+    dots: true,
     slidesToShow: 1,
     infinite: true,
     speed: 500,
     fade: true,
-    asNavFor: ".portfolio__number"
+    appendDots: $('.portfolio__dots'),
+    asNavFor: ".portfolio__number",
   })
 
   $('.portfolio__arrow--prev').on('click', function (e) {
@@ -92,6 +93,10 @@ $(function () {
 
   $(".header__main-logo, .header__nav, .footer__nav-list, .footer__description, .footer__scrollup-box").on("click", "a", function (e) {
     e.preventDefault()
+    $('.popup').removeClass('popup--active')
+    $('.overlay').removeClass('overlay--active')
+    $('.normal-swipe-on').removeClass('normal-swipe-off')
+    $('.header__top').removeClass('header__top--off')
     var id = $(this).attr('href'),
       top = $(id).offset().top
     $('body,html').animate({ scrollTop: top }, 1500)
@@ -104,6 +109,8 @@ $(function () {
     $('.popup').addClass('popup--active')
     $('.popup__window').addClass('popup__window--active')
     $('.overlay').addClass('overlay--active')
+    $('.normal-swipe-on').addClass('normal-swipe-off')
+    $('.header__top').addClass('header__top--off')
   })
 
   $('.popup__close, .overlay').on('click', function (e) {
@@ -111,6 +118,8 @@ $(function () {
     $('.popup').removeClass('popup--active')
     $('.popup__window').removeClass('popup__window--active')
     $('.overlay').removeClass('overlay--active')
+    $('.normal-swipe-on').removeClass('normal-swipe-off')
+    $('.header__top').removeClass('header__top--off')
   })
 
   /* ====================BURGER=================== */
@@ -133,6 +142,14 @@ $(function () {
     $('.about-us__inner-checkmark').toggleClass('about-us__inner-checkmark--active')
     $('.about-us__text').toggleClass('about-us__text--disable')
     $('.about-us__text-grd').toggleClass('about-us__text-grd--disable')
+  })
+
+  $('.portfolio__inner-btn').on('click', function(e){
+    e.preventDefault()
+    $('.portfolio__inner-btn').toggleClass('portfolio__inner-btn--active')
+    $('.portfolio__inner-checkmark').toggleClass('portfolio__inner-checkmark--active')
+    $('.portfolio__text').toggleClass('portfolio__text--disable')
+    $('.portfolio__text-grd').toggleClass('portfolio__text-grd--disable')
   })
 
   /* ====================INACTIVE==================== */
