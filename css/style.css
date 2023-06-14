@@ -665,6 +665,8 @@ head, body {
 
 .portfolio__img-box {
   overflow: hidden;
+  /* border: 20px solid #e8e8e8;
+  border-radius: 40px; */ 
 }
 
 .portfolio__img-box img {
@@ -1163,6 +1165,7 @@ a.contact__info-subtitle:hover {
   background-color: #fff;
   padding: 30px 50px 30px;
 }
+
 .popup__logo-mobile {
   display: none;
 }
@@ -1371,7 +1374,7 @@ a.contact__info-subtitle:hover {
 
   .header__body-inner .slick-slider {
     text-align: center;
-    margin: 0 auto 40px;
+    margin: 0 auto 20px;
     max-width: 100%;
   }
 
@@ -1766,6 +1769,7 @@ a.contact__info-subtitle:hover {
     .popup__logo-desc {
       display: none;
     }
+
     .popup__logo-mobile {
       display: block;
     }
@@ -1803,6 +1807,22 @@ a.contact__info-subtitle:hover {
 
   @media (max-width: 400px) {
 
+    .main__trust {
+      padding-bottom: 100px;
+    }
+    
+    .main__portfolio {
+      padding: 0 0 100px;
+    }
+    
+    .main__feedback {
+      padding: 0 0 100px;
+    }
+    
+    .main__contact {
+      padding: 0 0 100px;
+    }
+    
     .about-us__top-inner,
     .portfolio__inner {
       position: relative;
