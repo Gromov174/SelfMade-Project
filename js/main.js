@@ -97,6 +97,8 @@ $(function () {
     $('.overlay').removeClass('overlay--active')
     $('.normal-swipe-on').removeClass('normal-swipe-off')
     $('.header__top').removeClass('header__top--off')
+    $('.burger').toggleClass('burger--close')
+    $('.header__top-inner').toggleClass('header__top-inner--open')
     var id = $(this).attr('href'),
       top = $(id).offset().top
     $('body,html').animate({ scrollTop: top }, 1500)
