@@ -1145,7 +1145,7 @@ a.contact__info-subtitle:hover {
 .popup__window {
   overflow: auto;
   max-width: 1000px;
-  height: 100vh;
+  height: 99vh;
   max-height: 820px;
   background-color: #EEEEEE;
   border-radius: 20px;
