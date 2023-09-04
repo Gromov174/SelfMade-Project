@@ -87,18 +87,18 @@ $(function () {
       }
     }]
   })
-  
-  
+
+
   /* ====================SMOTH-SCROLL==================== */
 
-   $(".header__nav-list, .footer__nav-list, .footer__description, .footer__scrollup-box").on("click", "a", function (e) {
+  $(".header__nav-list, .footer__nav-list, .footer__description, .footer__scrollup-box").on("click", "a", function (e) {
     e.preventDefault()
     $('.popup').removeClass('popup--active')
     $('.overlay').removeClass('overlay--active')
     $('.normal-swipe-on').removeClass('normal-swipe-off')
     $('.header__top').removeClass('header__top--off')
     $('.burger').toggleClass('burger--close')
-    $('.header__top-inner').toggleClass('header__top-inner--open')
+    $('.header__top-inner').removeClass('header__top-inner--open')
     var id = $(this).attr('href'),
       top = $(id).offset().top
     $('body,html').animate({ scrollTop: top }, 1500)
@@ -133,19 +133,19 @@ $(function () {
 
   /* ====================BURGER=================== */
 
-  $('.burger').on('click', function(e){
+  $('.burger').on('click', function (e) {
     e.preventDefault()
     $('.burger').toggleClass('burger--close')
     $('.header__top-inner').toggleClass('header__top-inner--open')
     $('.header__menu').toggleClass('header__menu--open')
   })
 
-  $('.header__nav-item').on('click', 'a', function(e){
+  $('.header__nav-item').on('click', 'a', function (e) {
     e.preventDefault()
     $('.header__menu').toggleClass('header__menu--open')
   })
 
-  $('.about-us__inner-btn').on('click', function(e){
+  $('.about-us__inner-btn').on('click', function (e) {
     e.preventDefault()
     $('.about-us__inner-btn').toggleClass('about-us__inner-btn--active')
     $('.about-us__inner-checkmark').toggleClass('about-us__inner-checkmark--active')
@@ -153,7 +153,7 @@ $(function () {
     $('.about-us__text-grd').toggleClass('about-us__text-grd--disable')
   })
 
-  $('.portfolio__inner-btn').on('click', function(e){
+  $('.portfolio__inner-btn').on('click', function (e) {
     e.preventDefault()
     $('.portfolio__inner-btn').toggleClass('portfolio__inner-btn--active')
     $('.portfolio__inner-checkmark').toggleClass('portfolio__inner-checkmark--active')
